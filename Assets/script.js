@@ -43,6 +43,51 @@ function showQuestionOne() {
 }
 
 function checkAnswerOne() {
+  showQuestionTwo
+  if (answerButton === correctAnswer) {
+
+  }
+}
+
+function showQuestionTwo() {
+  answerButton.addEventListener("click", checkAnswerTwo)
+}
+
+function checkAnswerTwo() {
+  showQuestionThree
+  if (answerButton === correctAnswer) {
+
+  }
+}
+
+function showQuestionThree() {
+  answerButton.addEventListener("click", checkAnswerThree)
+}
+
+function checkAnswerThree() {
+  showQuestionFour
+  if (answerButton === correctAnswer) {
+
+  }
+}
+
+function showQuestionFour() {
+answerButton.addEventListener("click", checkAnswerFour)
+}
+
+function checkAnswerFour() {
+  showQuestionFive
+  if (answerButton === correctAnswer) {
+
+  }
+}
+
+function showQuestionFive() {
+answerButton.addEventListener("click", checkAnswerFive)
+}
+
+function checkAnswerFive() {
+  endQuiz()
   if (answerButton === correctAnswer) {
 
   }
