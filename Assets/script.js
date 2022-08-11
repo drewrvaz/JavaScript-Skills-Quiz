@@ -64,8 +64,8 @@ function countdown() {
 
 function showQuestions() {
   for (let i = 0; i < questionIndex.length; i++) {
-    questionEl = questionIndex[0].question
-    answerButton = questionIndex[0].options
+    questionEl.textContent = questionIndex[0].question
+    answerButton.textContent = questionIndex[0].options
   }
 }
 console.log(showQuestions)
