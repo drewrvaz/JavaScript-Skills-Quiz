@@ -4,11 +4,11 @@ var quizInstructions = document.getElementById("instruction-card")
 var quizQuestions = document.getElementById("question-card")
 var quizScore = document.getElementById("score-card")
 var quizHighScores = document.getElementById("highscore-card")
-var question = document.getElementById("question")
-var answer = document.getElementById("answer")
+var questionEl = document.getElementById("question")
+var answerButtons = document.getElementById("answer")
 
 //An array to store all the questions and their answers
-var questions = [
+var questionIndex = [
   {
     question: "Commonly used data types DO NOT include:",
     answers: ["1) strings", "2) booleans", "3) alerts", "4) numbers"],
@@ -36,9 +36,6 @@ var questions = [
   }
 ]
 
-// Let variable to define the question index
-let currentQuestionIndex
-
 // Event listener on the start button to begin the quiz
 startButton.addEventListener("click", startQuiz) 
 
@@ -47,7 +44,7 @@ function startQuiz() {
   quizInstructions.classList.add("hide-card")
   quizQuestions.classList.remove("hide-card")
   quizQuestions.classList.add("card")
-  currentQuestionIndex = 0  
+  questionIndex = 0  
   showQuestion()
 }
 
@@ -66,8 +63,8 @@ function countdown() {
   }, 1000);
 }
 
-function showQuestion(questions) {
-  quizQuestions.innerText = questions.question
+function showQuestion(questionEl) {
+  questionEl.innerText = question.question
 }
 
 function endQuiz() {
