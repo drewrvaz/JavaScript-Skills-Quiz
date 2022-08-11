@@ -37,7 +37,7 @@ a:hover {
   text-align: center;
 }
 
-#question-card, #score-card, #highscore-card {
+.hide-card {
   display: none;
 }
 
