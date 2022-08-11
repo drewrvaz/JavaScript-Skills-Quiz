@@ -103,7 +103,17 @@ function showQuestion() {
 console.log(showQuestion)
 
 function endQuiz() {
-quizQuestions.classList.add("hide-card")
-quizScore.classList.remove("hide-card")
-quizScore.classList.add("card")
+quizQuestions.classList.add("hide-card");
+quizScore.classList.remove("hide-card");
+quizScore.classList.add("card");
+var submitScore = document.getElementById("submit-score");
+submitScore.addEventListener("click", showHighScores);
+}
+
+function showHighScores() {
+  quizScore.classList.add("hide-card");
+  quizHighScores.classList.remove("hide-card");
+  quizHighScores.classList.add("card");
+  var input = document.getElementById("recorded-scores").value;
+  input.textContent = 
 }
