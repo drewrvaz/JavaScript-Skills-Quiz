@@ -76,7 +76,7 @@ function countdown() {
     }  else {
       timeRemaining.textContent = "Time's up!";
       clearInterval(timeInterval);
-      endQuiz;
+      endQuiz();
     }
   }, 1000);
 }
