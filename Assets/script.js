@@ -34,6 +34,9 @@ var questions = [
   }
 ]
 
+// Let variable to define the question index
+let currentQuestionIndex
+
 // Event listener on the start button to begin the quiz
 startButton.addEventListener("click", startQuiz) 
 
@@ -42,6 +45,8 @@ function startQuiz() {
   quizInstructions.classList.add("hide-card")
   quizQuestions.classList.remove("hide-card")
   quizQuestions.classList.add("card")
+  currentQuestionIndex = 0  
+  showQuestion()
 }
 
 // Function for the countdown clock
@@ -57,6 +62,10 @@ function countdown() {
       endQuiz;
     }
   }, 1000);
+}
+
+function showQuestion(questions) {
+  quizQuestions.innerText = questions.question
 }
 
 function endQuiz() {
