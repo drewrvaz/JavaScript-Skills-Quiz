@@ -10,17 +10,20 @@
   </head>
   
   <body>
+    <!--HEader to contain the HighScore and the time remaining-->
     <header>
       <a href="highscore-card">View High Scores</a>
       <p id="time-remaining">Time: </p>
     </header>
 
+    <!--Card to contain the instructions and start button for the quiz-->
     <div id="instruction-card" class="card">
       <h2>Coding Quiz Challenge</h2>
       <p>Try to answer the following code-related questions within the time limit. Keep in <br> mind that incorrect answers will penalize your score/time by ten seconds!</p>
       <button id="start-button" class="button">Start Quiz</button>
     </div>
 
+    <!--Card to contain the questions for the quiz-->
     <div id="question-card" class="card">
       <h4>Question</h4>
       <button id="answer-1" class="button">Answer 1</button>
@@ -29,6 +32,7 @@
       <button id="answer-4" class="button">Answer 4</button>
     </div>
 
+    <!--Card to contain the user's final score, and a submission of the score-->
     <div id="score-card" class="card">
       <h4>All Done!</h4>
       <p id="final-score">Your final score is: </p>
@@ -38,6 +42,7 @@
       </form>
     </div>
 
+    <!--A card to contain all of the user's scores on the quiz-->
     <div id="highscore-card" class="card">
       <h4>High Scores</h4>
       <div id="recorded-scores"></div>
