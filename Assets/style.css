@@ -37,6 +37,10 @@ a:hover {
   text-align: center;
 }
 
+#question-card, #score-card, #highscore-card {
+  display: none;
+}
+
 #answer-1, #answer-2, #answer-3, #answer-4 {
   margin: 3px;
 }
