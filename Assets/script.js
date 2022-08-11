@@ -5,6 +5,7 @@ var quizScore = document.getElementById("score-card");
 var quizHighScores = document.getElementById("highscore-card");
 var questionCard = document.getElementById("question-card");
 var answerButton = document.querySelectorAll("answer-button");
+var questionEl = document.getElementById("question")
 
 //Array to store the quiz questions
 var questionIndex = [
@@ -63,9 +64,11 @@ function countdown() {
 
 function showQuestions() {
   for (let i = 0; i < questionIndex.length; i++) {
-    
+    questionEl = questionIndex[0].question
+    answerButton = questionIndex[0].options
   }
 }
+console.log(showQuestions)
 
 function checkAnswer() {
   if (answerButton === correctAnswer) {
@@ -85,7 +88,6 @@ function endQuiz() {
 questionCard.classList.add("hide-card");
 quizScore.classList.remove("hide-card");
 quizScore.classList.add("card");
-
 var submitScore = document.getElementById("submit-score");
 submitScore.addEventListener("click", showHighScores);
 }
