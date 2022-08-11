@@ -39,6 +39,7 @@ var questionIndex = [
 // Event listener on the start button to begin the quiz
 startButton.addEventListener("click", startQuiz); 
 
+// Function to start the quiz
 function startQuiz() {
   countdown();
   quizInstructions.classList.add("hide-card");
@@ -79,8 +80,8 @@ function showQuestions() {
     var correctAnswer = questionIndex[0].answer[0]
   }
 }
-console.log(showQuestions)
 
+// This will eventually be the function that checks the user's choice for correctness
 function checkAnswer() {
   if (answerButton === correctAnswer) {
     alert("Correct!");
