@@ -12,27 +12,27 @@ var questionIndex = [
   {
     question: "Commonly used data types DO NOT include: ",
     options: ["1. Strings", "2. Booleans", "3. Alerts", "4. Numbers"],
-    correctAnswer: "3. Alerts"
+    answer: "3. Alerts"
   },
   {
     question: "The conidition in an if/else statement is enclosed within ______.",
     options: ["1. Quotes", "2. Curly Brackets", "3. Parentheses", "4. Square Brackets"],
-    correctAnswer: "Parentheses"
+    answer: "Parentheses"
   },
   {
     question: "Arrays in JavaScript can be used to store ______.",
     options: ["1. Numbers and Strings", "Other Arrays", "3. Booleans", "4. All of the Above"],
-    correctAnswer: "4. All of the Above"
+    answer: "4. All of the Above"
   },
   {
     question: "String values must be enclosed within ______ when being assigned in variables.",
     options: ["1. Commas", "2. Curly Brackets", "3. Quotes", "4. Parentheses"],
-    correctAnswer: "3. Quotes"
+    answer: "3. Quotes"
   },
   {
     question: "A very useful tool during development and debigging for printing content to the debugger is: ",
     options: ["1. JavaScript", "2. terminal/bash", "3. for loops", "4. console.log", ],
-    correctAnswer: "4. console.log"
+    answer: "4. console.log"
   }
 ]
 
@@ -62,10 +62,21 @@ function countdown() {
   }, 1000);
 }
 
+// Function to cycle through the array containing all of the questions
 function showQuestions() {
+  // Variables for each of the options that the user can choose for each question
+  var optionOne = document.getElementById("option1")
+  var optionTwo = document.getElementById("option2")
+  var optionThree = document.getElementById("option3")
+  var optionFour = document.getElementById("option4")
+  // For loop to cycle through the questions, answers, and correct answers as the user takes the quiz
   for (let i = 0; i < questionIndex.length; i++) {
     questionEl.textContent = questionIndex[0].question
-    answerButton.textContent = questionIndex[0].options
+    optionOne.textContent = questionIndex[0].options[0]    
+    optionTwo.textContent = questionIndex[0].options[1]
+    optionThree.textContent = questionIndex[0].options[2]
+    optionFour.textContent = questionIndex[0].options[3]
+    var correctAnswer = questionIndex[0].answer[0]
   }
 }
 console.log(showQuestions)
