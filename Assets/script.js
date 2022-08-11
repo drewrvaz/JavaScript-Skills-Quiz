@@ -3,11 +3,14 @@ var startButton = document.getElementById("start-button");
 var quizInstructions = document.getElementById("instruction-card");
 var quizScore = document.getElementById("score-card");
 var quizHighScores = document.getElementById("highscore-card");
-var quesstionOne = document.getElementById("question-one")
-var quesstionTwo = document.getElementById("question-two")
-var quesstionThree = document.getElementById("question-three")
-var quesstionFour = document.getElementById("question-four")
-var quesstionFive = document.getElementById("question-five")
+var quesstionOne = document.getElementById("question-one");
+var quesstionTwo = document.getElementById("question-two");
+var quesstionThree = document.getElementById("question-three");
+var quesstionFour = document.getElementById("question-four");
+var quesstionFive = document.getElementById("question-five");
+var answerButton = document.getElementById("answer-button");
+var correctAnswer = document.getElementById("correct-answer");
+var incorrectAnswer = document.getElementById("incorrect-answer");
 
 // Event listener on the start button to begin the quiz
 startButton.addEventListener("click", startQuiz); 
@@ -18,10 +21,6 @@ function startQuiz() {
   quesstionOne.classList.remove("hide-card");
   quesstionOne.classList.add("card");
   showQuestionOne();
-}
-
-function showQuestionOne() {
-
 }
 
 // Function for the countdown clock
@@ -37,6 +36,16 @@ function countdown() {
       endQuiz();
     }
   }, 1000);
+}
+
+function showQuestionOne() {
+  answerButton.addEventListener("click", checkAnswerOne)
+}
+
+function checkAnswerOne() {
+  if (answerButton === correctAnswer) {
+    
+  }
 }
 
 // Function to end the quiz and show the user their score

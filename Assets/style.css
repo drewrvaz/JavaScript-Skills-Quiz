@@ -41,14 +41,11 @@ a:hover {
   display: none;
 }
 
-#answer-1, #answer-2, #answer-3, #answer-4 {
-  margin: 3px;
-}
-
 .button, .answer-button {
   background-color: purple;
   color: white;
   border-radius: 5px;
+  margin: 3px;
 }
 
 .button:hover {
