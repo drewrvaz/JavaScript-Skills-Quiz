@@ -3,14 +3,37 @@ var startButton = document.getElementById("start-button");
 var quizInstructions = document.getElementById("instruction-card");
 var quizScore = document.getElementById("score-card");
 var quizHighScores = document.getElementById("highscore-card");
-var questionOne = document.getElementById("question-one");
-var questionTwo = document.getElementById("question-two");
-var questionThree = document.getElementById("question-three");
-var questionFour = document.getElementById("question-four");
-var questionFive = document.getElementById("question-five");
-var answerButton = document.getElementById("answer-button");
-var correctAnswer = document.getElementById("correct-answer");
-var incorrectAnswer = document.getElementById("incorrect-answer");
+var questionCard = document.getElementById("question-card");
+var answerButton = document.querySelectorAll("answer-button");
+
+//Array to store the quiz questions
+var questionIndex = [
+  {
+    question: "Commonly used data types DO NOT include: ",
+    options: ["1. Strings", "2. Booleans", "3. Alerts", "4. Numbers"],
+    correctAnswer: "3. Alerts"
+  },
+  {
+    question: "The conidition in an if/else statement is enclosed within ______.",
+    options: ["1. Quotes", "2. Curly Brackets", "3. Parentheses", "4. Square Brackets"],
+    correctAnswer: "Parentheses"
+  },
+  {
+    question: "Arrays in JavaScript can be used to store ______.",
+    options: ["1. Numbers and Strings", "Other Arrays", "3. Booleans", "4. All of the Above"],
+    correctAnswer: "4. All of the Above"
+  },
+  {
+    question: "String values must be enclosed within ______ when being assigned in variables.",
+    options: ["1. Commas", "2. Curly Brackets", "3. Quotes", "4. Parentheses"],
+    correctAnswer: "3. Quotes"
+  },
+  {
+    question: "A very useful tool during development and debigging for printing content to the debugger is: ",
+    options: ["1. JavaScript", "2. terminal/bash", "3. for loops", "4. console.log", ],
+    correctAnswer: "4. console.log"
+  }
+]
 
 // Event listener on the start button to begin the quiz
 startButton.addEventListener("click", startQuiz); 
@@ -18,9 +41,9 @@ startButton.addEventListener("click", startQuiz);
 function startQuiz() {
   countdown();
   quizInstructions.classList.add("hide-card");
-  questionOne.classList.remove("hide-card");
-  questionOne.classList.add("card");
-  showQuestionOne();
+  questionCard.classList.remove("hide-card");
+  questionCard.classList.add("card");
+  showQuestion();
 }
 
 // Function for the countdown clock
@@ -38,64 +61,28 @@ function countdown() {
   }, 1000);
 }
 
-function showQuestionOne() {
-  answerButton.addEventListener("click", checkAnswerOne)
+function showQuestion() {
+  answerButton.addEventListener("click", checkAnswer);
 }
 
-function checkAnswerOne() {
-  showQuestionTwo
+function checkAnswer() {
   if (answerButton === correctAnswer) {
-
-  }
-}
-
-function showQuestionTwo() {
-  answerButton.addEventListener("click", checkAnswerTwo)
-}
-
-function checkAnswerTwo() {
-  showQuestionThree
-  if (answerButton === correctAnswer) {
-
-  }
-}
-
-function showQuestionThree() {
-  answerButton.addEventListener("click", checkAnswerThree)
-}
-
-function checkAnswerThree() {
-  showQuestionFour
-  if (answerButton === correctAnswer) {
-
-  }
-}
-
-function showQuestionFour() {
-answerButton.addEventListener("click", checkAnswerFour)
-}
-
-function checkAnswerFour() {
-  showQuestionFive
-  if (answerButton === correctAnswer) {
-
-  }
-}
-
-function showQuestionFive() {
-answerButton.addEventListener("click", checkAnswerFive)
-}
-
-function checkAnswerFive() {
-  endQuiz()
-  if (answerButton === correctAnswer) {
-
+    alert("Correct!");
+  } else {
+    alert("Incorrect!")
+    if (timeLeft >= 10) {
+      timeLeft = timeLeft - 10
+    } else {
+      endQuiz
+      questionOne.classList.add("hide-card")
+      questionOne.classList.remove("card")
+    }
   }
 }
 
 // Function to end the quiz and show the user their score
 function endQuiz() {
-questionFive.classList.add("hide-card");
+questionCard.classList.add("hide-card");
 quizScore.classList.remove("hide-card");
 quizScore.classList.add("card");
 var submitScore = document.getElementById("submit-score");
