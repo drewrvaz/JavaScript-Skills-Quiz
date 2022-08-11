@@ -62,7 +62,6 @@ function countdown() {
 }
 
 function showQuestion() {
-  answerButton.addEventListener("click", checkAnswer);
 }
 
 function checkAnswer() {
@@ -74,8 +73,6 @@ function checkAnswer() {
       timeLeft = timeLeft - 10
     } else {
       endQuiz
-      questionOne.classList.add("hide-card")
-      questionOne.classList.remove("card")
     }
   }
 }
@@ -85,6 +82,7 @@ function endQuiz() {
 questionCard.classList.add("hide-card");
 quizScore.classList.remove("hide-card");
 quizScore.classList.add("card");
+
 var submitScore = document.getElementById("submit-score");
 submitScore.addEventListener("click", showHighScores);
 }
