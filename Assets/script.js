@@ -100,8 +100,8 @@ function showQuestion() {
   answer3.value = questionIndex[id].answers[2].isCorrect;
   answer4.value = questionIndex[id].answers[3].isCorrect;
 }
-console.log(showQuestion)
 
+// Function to end the quiz and show the user their score
 function endQuiz() {
 quizQuestions.classList.add("hide-card");
 quizScore.classList.remove("hide-card");
@@ -110,10 +110,10 @@ var submitScore = document.getElementById("submit-score");
 submitScore.addEventListener("click", showHighScores);
 }
 
+// Function to take the user to the highscores page before deciding if they want to play again
 function showHighScores() {
   quizScore.classList.add("hide-card");
   quizHighScores.classList.remove("hide-card");
   quizHighScores.classList.add("card");
   var input = document.getElementById("recorded-scores").value;
-  input.textContent = 
 }
