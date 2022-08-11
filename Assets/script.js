@@ -41,7 +41,7 @@ function countdown() {
 
 // Function to end the quiz and show the user their score
 function endQuiz() {
-quizQuestions.classList.add("hide-card");
+quesstionFive.classList.add("hide-card");
 quizScore.classList.remove("hide-card");
 quizScore.classList.add("card");
 var submitScore = document.getElementById("submit-score");
