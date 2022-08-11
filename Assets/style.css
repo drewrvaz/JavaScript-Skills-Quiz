@@ -33,6 +33,10 @@ a:hover {
   height: 100vh;
 }
 
+#instruction-card {
+  text-align: center;
+}
+
 .button {
   background-color: purple;
   color: white;
