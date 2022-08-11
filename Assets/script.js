@@ -3,11 +3,11 @@ var startButton = document.getElementById("start-button");
 var quizInstructions = document.getElementById("instruction-card");
 var quizScore = document.getElementById("score-card");
 var quizHighScores = document.getElementById("highscore-card");
-var quesstionOne = document.getElementById("question-one");
-var quesstionTwo = document.getElementById("question-two");
-var quesstionThree = document.getElementById("question-three");
-var quesstionFour = document.getElementById("question-four");
-var quesstionFive = document.getElementById("question-five");
+var questionOne = document.getElementById("question-one");
+var questionTwo = document.getElementById("question-two");
+var questionThree = document.getElementById("question-three");
+var questionFour = document.getElementById("question-four");
+var questionFive = document.getElementById("question-five");
 var answerButton = document.getElementById("answer-button");
 var correctAnswer = document.getElementById("correct-answer");
 var incorrectAnswer = document.getElementById("incorrect-answer");
@@ -18,8 +18,8 @@ startButton.addEventListener("click", startQuiz);
 function startQuiz() {
   countdown();
   quizInstructions.classList.add("hide-card");
-  quesstionOne.classList.remove("hide-card");
-  quesstionOne.classList.add("card");
+  questionOne.classList.remove("hide-card");
+  questionOne.classList.add("card");
   showQuestionOne();
 }
 
@@ -44,13 +44,13 @@ function showQuestionOne() {
 
 function checkAnswerOne() {
   if (answerButton === correctAnswer) {
-    
+
   }
 }
 
 // Function to end the quiz and show the user their score
 function endQuiz() {
-quesstionFive.classList.add("hide-card");
+questionFive.classList.add("hide-card");
 quizScore.classList.remove("hide-card");
 quizScore.classList.add("card");
 var submitScore = document.getElementById("submit-score");
