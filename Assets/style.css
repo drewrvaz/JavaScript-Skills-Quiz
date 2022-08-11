@@ -37,6 +37,11 @@ a:hover {
   border-radius: 5px;
 }
 
+.button:hover {
+  opacity: 50%;
+  cursor: pointer;
+}
+
 input {
   border-radius: 5px;
 }
