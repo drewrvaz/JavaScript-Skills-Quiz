@@ -4,6 +4,8 @@ var quizInstructions = document.getElementById("instruction-card")
 var quizQuestions = document.getElementById("question-card")
 var quizScore = document.getElementById("score-card")
 var quizHighScores = document.getElementById("highscore-card")
+var question = document.getElementById("question")
+var answer = document.getElementById("answer")
 
 //An array to store all the questions and their answers
 var questions = [
