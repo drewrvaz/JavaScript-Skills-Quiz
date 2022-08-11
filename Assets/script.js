@@ -43,7 +43,7 @@ function startQuiz() {
   quizInstructions.classList.add("hide-card");
   questionCard.classList.remove("hide-card");
   questionCard.classList.add("card");
-  showQuestion();
+  showQuestions();
 }
 
 // Function for the countdown clock
@@ -61,7 +61,10 @@ function countdown() {
   }, 1000);
 }
 
-function showQuestion() {
+function showQuestions() {
+  for (let i = 0; i < questionIndex.length; i++) {
+    
+  }
 }
 
 function checkAnswer() {
