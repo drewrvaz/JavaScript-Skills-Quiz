@@ -64,7 +64,7 @@ function countdown() {
 }
 
 function showQuestion(questionEl) {
-  questionEl.innerText = question.question
+  questionEl.innerText = questionEl.question
 }
 
 function endQuiz() {
