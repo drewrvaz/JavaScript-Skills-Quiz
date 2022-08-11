@@ -11,28 +11,43 @@ var answerButtons = document.getElementById("answer")
 var questionIndex = [
   {
     question: "Commonly used data types DO NOT include:",
-    answers: ["1) strings", "2) booleans", "3) alerts", "4) numbers"],
-    correctAnswer: "3) alerts",
+    answers: [ 
+      {text: "1) strings",  isCorrect: false},
+      {text: "2) booleans", isCorrect: false}, 
+      {text: "3) alerts", isCorrect: true}, 
+      {text: "4) numbers", isCorrect: false}]
   },
   {
     question: "The condition in an if/else statement is enclosed within ______.",
-    answers: ["1) quotes", "2) curly brackets", "3) parentheses", "4)square brackets"],
-    correctAnswer: "3) parentheses"
+    answers: [ 
+      {text: "1) quotes",  isCorrect: false},
+      {text: "2) curly brackets", isCorrect: false}, 
+      {text: "3) parentheses", isCorrect: true}, 
+      {text: "4) square brackets", isCorrect: false}]
   },
   {
     question: "Arrays in JavaScript can be used to store ______.",
-    answers: ["1) numbers and strings", "2) other arrays", "3) bolleans", "4) all of the above"],
-    correctAnswer: "4) all of the above"
+    answers: [ 
+      {text: "1) numbers and strings",  isCorrect: false},
+      {text: "2) other arrays", isCorrect: false}, 
+      {text: "3) booleans", isCorrect: false}, 
+      {text: "4) all of the above", isCorrect: true}]
   },
   {
     question: "String values must be enclosed within ______ when being assigned in variables.",
-    answers: ["1) commas", "2) curly brackets", "3) quotes", "4)parentheses"],
-    correctAnswer: "3) quotes"
+    answers: [ 
+      {text: "1) commas",  isCorrect: false},
+      {text: "2) curly brackets", isCorrect: false}, 
+      {text: "3) quotes", isCorrect: true}, 
+      {text: "4) parentheses", isCorrect: false}]
   },
   {
     question: "A very useful tool during development and debugging for printing content to the debugger is:",
-    answers: ["1) JavaScript", "2) terminal/bash", "3) for loops", "4) console.log"],
-    correctAnswer: "4) console.log"
+    answers: [
+      {text: "1) JavaScript",  isCorrect: false},
+      {text: "2) terminal/bash", isCorrect: false}, 
+      {text: "3) for loops", isCorrect: false}, 
+      {text: "4) console.log", isCorrect: true}]
   }
 ]
 
