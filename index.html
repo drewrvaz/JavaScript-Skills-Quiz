@@ -5,14 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>JavaScript Quiz</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./Assets/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   </head>
   
   <body>
     <header>
       <a href="highscore-card">View High Scores</a>
-      <p>Time: </p>
+      <p id="time-remaining">Time: </p>
     </header>
-    <script src="./assets/js/script.js"></script>
+
+    <div id="instruction-card" class="card">
+      <h2>Coding Quiz Challenge</h2>
+      <p>Try to answer the following code-related questions within the time limit. Keep in <br> mind that incorrect answers will penalize your score/time by ten seconds!</p>
+      <button id="start-button">Start Quiz</button>
+    </div>
+
+    <div id="question-card" class="card">
+      <h4>Question</h4>
+      <button id="answer-1" class="button">Answer 1</button>
+      <button id="answer-2" class="button">Answer 2</button>
+      <button id="answer-3" class="button">Answer 3</button>
+      <button id="answer-4" class="button">Answer 4</button>
+    </div>
+
+    <div id="score-card" class="card">
+      <h4>All Done!</h4>
+      <p id="final-score">Your final score is: </p>
+      <form action="submit">
+        <label for="score">Enter Initials: </label>
+        <input type="text">
+      </form>
+    </div>
+
+    <div id="highscore-card" class="card">
+      <h4>High Scores</h4>
+      <div id="recorded-scores"></div>
+      <button id="back-button" class="last-btn">Go Back</button>
+      <button id="clear-button" class="last-btn">Clear Scores</button>
+    </div>
+
+    <script src="./Assets/script.js"></script>
   </body>
 </html> 
