@@ -81,26 +81,6 @@ function countdown() {
   }, 1000);
 }
 
-function showQuestion() {
-  // Sets question text
-  questionEl.innerText = questionIndex[id].question;
-  // Calls the answer options
-  var answer1 = document.getElementById("answer-1");
-  var answer2 = document.getElementById("answer-2");
-  var answer3 = document.getElementById("answer-3");
-  var answer4 = document.getElementById("answer-4");
-  // Sets the answer text
-  answer1.innerText = questionIndex[id].answers[0].text;
-  answer2.innerText = questionIndex[id].answers[1].text;
-  answer3.innerText = questionIndex[id].answers[2].text;
-  answer4.innerText = questionIndex[id].answers[3].text;
-  // Sets the true or false value for each answer
-  answer1.value = questionIndex[id].answers[0].isCorrect;
-  answer2.value = questionIndex[id].answers[1].isCorrect;
-  answer3.value = questionIndex[id].answers[2].isCorrect;
-  answer4.value = questionIndex[id].answers[3].isCorrect;
-}
-
 // Function to end the quiz and show the user their score
 function endQuiz() {
 quizQuestions.classList.add("hide-card");
