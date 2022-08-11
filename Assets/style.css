@@ -45,13 +45,13 @@ a:hover {
   margin: 3px;
 }
 
-.button {
+.button, .answer-button {
   background-color: purple;
   color: white;
   border-radius: 5px;
 }
 
-.button:hover {
+.button, .answer-button:hover {
   opacity: 50%;
   cursor: pointer;
 }

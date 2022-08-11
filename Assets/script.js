@@ -1,10 +1,13 @@
 var timeRemaining = document.getElementById("time-remaining");
 var startButton = document.getElementById("start-button");
 var quizInstructions = document.getElementById("instruction-card");
-var quizQuestions = document.getElementById("question-card");
 var quizScore = document.getElementById("score-card");
 var quizHighScores = document.getElementById("highscore-card");
-var questionEl = document.getElementById("question");
+var quesstionOne = document.getElementById("question-one")
+var quesstionTwo = document.getElementById("question-two")
+var quesstionThree = document.getElementById("question-three")
+var quesstionFour = document.getElementById("question-four")
+var quesstionFive = document.getElementById("question-five")
 
 // Event listener on the start button to begin the quiz
 startButton.addEventListener("click", startQuiz); 
@@ -12,9 +15,13 @@ startButton.addEventListener("click", startQuiz);
 function startQuiz() {
   countdown();
   quizInstructions.classList.add("hide-card");
-  quizQuestions.classList.remove("hide-card");
-  quizQuestions.classList.add("card");
-  showQuestion();
+  quesstionOne.classList.remove("hide-card");
+  quesstionOne.classList.add("card");
+  showQuestionOne();
+}
+
+function showQuestionOne() {
+
 }
 
 // Function for the countdown clock
