@@ -39,8 +39,12 @@ startButton.addEventListener("click", startQuiz)
 
 function startQuiz() {
   countdown()
+  quizInstructions.classList.add("hide-card")
+  quizQuestions.classList.remove("hide-card")
+  quizQuestions.classList.add("card")
 }
 
+// Function for the countdown clock
 function countdown() {
   var timeLeft = 75;
   var timeInterval = setInterval(function () {
