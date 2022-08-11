@@ -1,5 +1,9 @@
 var timeRemaining = document.getElementById("time-remaining");
 var startButton = document.getElementById("start-button");
+var quizInstructions = document.getElementById("instruction-card")
+var quizQuestions = document.getElementById("question-card")
+var quizScore = document.getElementById("score-card")
+var quizHighScores = document.getElementById("highscore-card")
 
 //An array to store all the questions and their answers
 var questions = [
@@ -34,14 +38,14 @@ var questions = [
 startButton.addEventListener("click", startQuiz) 
 
 function startQuiz() {
-  countdown
+  countdown()
 }
 
 function countdown() {
   var timeLeft = 75;
   var timeInterval = setInterval(function () {
     if (timeLeft > 1) {
-      timeRemaining.textContent = timeLeft;
+      timeRemaining.textContent = "Time: " + timeLeft;
       timeLeft--;
     }  else {
       timeRemaining.textContent = '';
