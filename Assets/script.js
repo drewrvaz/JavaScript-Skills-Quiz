@@ -48,11 +48,11 @@ function startQuiz() {
 function countdown() {
   var timeLeft = 75;
   var timeInterval = setInterval(function () {
-    if (timeLeft > 1) {
+    if (timeLeft > 0) {
       timeRemaining.textContent = "Time: " + timeLeft;
       timeLeft--;
     }  else {
-      timeRemaining.textContent = '';
+      timeRemaining.textContent = "Time's up!";
       clearInterval(timeInterval);
       endQuiz;
     }
@@ -60,5 +60,7 @@ function countdown() {
 }
 
 function endQuiz() {
-
+quizQuestions.classList.add("hide-card")
+quizScore.classList.remove("hide-card")
+quizScore.classList.add("card")
 }
