@@ -4,6 +4,8 @@ var quizInstructions = document.getElementById("instruction-card");
 var quizScore = document.getElementById("score-card");
 var quizHighScores = document.getElementById("highscore-card");
 var questionCard = document.getElementById("question-card");
+var answerButton = document.querySelectorAll("answer-button");
+var questionEl = document.getElementById("question")
 
 //Array to store the quiz questions
 var questionIndex = [
@@ -66,32 +68,19 @@ function countdown() {
 
 // Function to cycle through the array containing the questions
 function showQuestions() {
-  let question = questionIndex[currentQuestion];
-  let options = question.options;
-
-  let questionEl = document.getElementById("question")
-  questionEl.textContent = question.question
-
-  for (let i = 0; i < options.length; i++) {
-    let option = options[i];
-    let answerButton = document.getElementsByClassName("answer-button" + i);
-    answerButton.textContent = option;
-    console.log(answerButton)
-  }
-} ;
-
-// Function to move on to the next question
-currentQuestion++;
-if (currentQuestion < questionIndex.length) {
-  showQuestions();
-} else {
-  endQuiz();
-}
-
-document.getElementsByClassName("answer-button").addEventListener("click", checkAnswer)
-
-function answerIsCorrect(answerButton) {
-  return answerButton.textContent === questionIndex[currentQuestion].answer;
+  // Variables for each of the options that the user can choose for each question
+  var optionOne = document.getElementById("option1")
+  var optionTwo = document.getElementById("option2")
+  var optionThree = document.getElementById("option3")
+  var optionFour = document.getElementById("option4")
+  // For loop to cycle through the questions, answers, and correct answers as the user takes the quiz
+  for (let i = 0; i < questionIndex.length; i++) {
+    questionEl.textContent = questionIndex[i].question
+    optionOne.textContent = questionIndex[i].options[0]    
+    optionTwo.textContent = questionIndex[i].options[1]
+    optionThree.textContent = questionIndex[i].options[2]
+    optionFour.textContent = questionIndex[i].options[3]
+  } ;
 }
 
 // This will eventually be the function that checks the user's choice for correctness
