@@ -48,9 +48,10 @@ function startQuiz() {
   showQuestions();
 }
 
+// Took time left out of the countdown function so that it could be read in the final score function
+var timeLeft = 75;
 // Function for the countdown clock
 function countdown() {
-  var timeLeft = 75;
   var timeInterval = setInterval(function () {
     if (timeLeft > 0) {
       timeRemaining.textContent = "Time: " + timeLeft;
@@ -77,8 +78,7 @@ function showQuestions() {
     optionTwo.textContent = questionIndex[0].options[1]
     optionThree.textContent = questionIndex[0].options[2]
     optionFour.textContent = questionIndex[0].options[3]
-    var correctAnswer = questionIndex[0].answer[0]
-  }
+  } ;
 }
 
 // This will eventually be the function that checks the user's choice for correctness
@@ -100,9 +100,12 @@ function endQuiz() {
 questionCard.classList.add("hide-card");
 quizScore.classList.remove("hide-card");
 quizScore.classList.add("card");
+var finalScore = document.getElementById("final-score");
+finalScore.textContent = "Your final score is: " + timeLeft;
 var submitScore = document.getElementById("submit-score");
-submitScore.addEventListener("click", showHighScores);
+submitScore.addEventListener("submit", showHighScores);
 }
+console.log(endQuiz)
 
 // Function to take the user to the highscores page before deciding if they want to play again
 function showHighScores() {
