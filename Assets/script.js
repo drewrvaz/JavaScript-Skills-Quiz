@@ -30,7 +30,7 @@ var questionIndex = [
     answer: "3. Quotes"
   },
   {
-    question: "A very useful tool during development and debigging for printing content to the debugger is: ",
+    question: "A very useful tool during development and debugging for printing content to the debugger is: ",
     options: ["1. JavaScript", "2. terminal/bash", "3. for loops", "4. console.log", ],
     answer: "4. console.log"
   }
@@ -69,18 +69,23 @@ function countdown() {
 // Function to cycle through the array containing the questions
 function showQuestions() {
   // Variables for each of the options that the user can choose for each question
-  var optionOne = document.getElementById("option1")
-  var optionTwo = document.getElementById("option2")
-  var optionThree = document.getElementById("option3")
-  var optionFour = document.getElementById("option4")
+  var optionOne = document.getElementById("option1");
+  var optionTwo = document.getElementById("option2");
+  var optionThree = document.getElementById("option3");
+  var optionFour = document.getElementById("option4");
+  questionEl.textContent = questionIndex[0].question;
+  optionOne.textContent = questionIndex[0].options[0]; 
+  optionTwo.textContent = questionIndex[0].options[1];
+  optionThree.textContent = questionIndex[0].options[2];
+  optionFour.textContent = questionIndex[0].options[3];
   // For loop to cycle through the questions, answers, and correct answers as the user takes the quiz
-  for (let i = 0; i < questionIndex.length; i++) {
-    questionEl.textContent = questionIndex[i].question
-    optionOne.textContent = questionIndex[i].options[0]    
-    optionTwo.textContent = questionIndex[i].options[1]
-    optionThree.textContent = questionIndex[i].options[2]
-    optionFour.textContent = questionIndex[i].options[3]
-  } ;
+  //for (let i = 0; i < questionIndex.length; i++) {
+   // questionEl.textContent = questionIndex[i].question
+   // optionOne.textContent = questionIndex[i].options[0]    
+   // optionTwo.textContent = questionIndex[i].options[1]
+   // optionThree.textContent = questionIndex[i].options[2]
+   // optionFour.textContent = questionIndex[i].options[3]
+  //} ;
 }
 
 // This will eventually be the function that checks the user's choice for correctness
