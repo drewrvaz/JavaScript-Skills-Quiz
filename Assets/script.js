@@ -73,11 +73,11 @@ function showQuestions() {
   var optionFour = document.getElementById("option4")
   // For loop to cycle through the questions, answers, and correct answers as the user takes the quiz
   for (let i = 0; i < questionIndex.length; i++) {
-    questionEl.textContent = questionIndex[0].question
-    optionOne.textContent = questionIndex[0].options[0]    
-    optionTwo.textContent = questionIndex[0].options[1]
-    optionThree.textContent = questionIndex[0].options[2]
-    optionFour.textContent = questionIndex[0].options[3]
+    questionEl.textContent = questionIndex[i].question
+    optionOne.textContent = questionIndex[i].options[0]    
+    optionTwo.textContent = questionIndex[i].options[1]
+    optionThree.textContent = questionIndex[i].options[2]
+    optionFour.textContent = questionIndex[i].options[3]
   } ;
 }
 
@@ -105,7 +105,6 @@ finalScore.textContent = "Your final score is: " + timeLeft;
 var submitScore = document.getElementById("submit-score");
 submitScore.addEventListener("submit", showHighScores);
 }
-console.log(endQuiz)
 
 // Function to take the user to the highscores page before deciding if they want to play again
 function showHighScores() {
